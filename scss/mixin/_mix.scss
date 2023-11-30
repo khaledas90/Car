@@ -1,0 +1,21 @@
+
+@mixin flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin font__big{
+    font-size: 80px;
+} 
+@mixin font__medium{
+    font-size: 40px;
+} 
+@mixin font__small{
+    font-size: 19px;
+} 
+
+
+@mixin border{
+    border-radius: 30px;
+} 

@@ -1,0 +1,94 @@
+@import '../media-query/media';
+@import '../mixin/mix';
+@import '../variable/var';
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: $dark;
+     z-index: 10;
+     nav{
+        @include flex;
+        width: 90%;
+        height: 80px;
+        margin: auto;
+
+    .logo{
+        width: 150px;
+        img{
+            width: 140px;
+        }
+    }
+        .nav-menu {
+            display: inline-flex;
+            align-items: center;
+            .nav-item{
+             margin-right: 30px;
+             color: $white;
+             position: relative;
+             cursor: pointer;
+             @include font__small;
+            }
+            .nav-item::after{
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0%;
+                height: 2px;
+                background-color: $red;
+                transition: 0.4s;
+            }
+
+            .nav-item:hover::after{
+                width: 100%;
+            } 
+
+        }
+        .social {
+            a{
+                .fa-brands,
+                .fas{
+                    color: $white;
+                    font-size: 22px;
+                    margin-left: 10px;
+                    transition: 0.3s;
+            }
+            i:hover{
+                transform: scale(1.3);
+                color: $red;
+            }
+            .fas{
+               display: none;
+            }
+            }
+        } 
+        @include tablet {
+            .fas{
+                display: block !important;
+             }  
+            .fa-brands{
+              display: none;  
+            } 
+            .nav-menu{
+                display: block;
+                position: relative;
+                top: 149px;
+                right: -273px;
+                text-align: right;
+                display: none;
+
+            }
+            .nav-item{
+                padding: 9px;
+            }
+        }
+     }
+}
+
+.hide {
+    display: block !important;
+  }

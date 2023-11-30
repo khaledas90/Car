@@ -1,0 +1,78 @@
+@import '../scss/media-query/media';
+@import '../scss/header/head';
+@import '../scss/variable/var';
+@import '../scss/mixin/mix';
+
+// global role
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+// hero
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    @include flex;
+    .text{
+        width: 90%;
+        margin: auto;
+
+        h4{
+            @include font__medium;
+            color: $white;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        h1{
+            color: $white;
+            font-size: 65px;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 30px;
+            
+            span{
+                color: $red;
+                font-size: 80px;
+                font-weight: bold;
+            }
+        }
+        p{
+            color: $white;
+            margin-bottom: 30px;
+        }
+        .btn{
+            button{
+               background-color: $red;
+                @include border;
+                color: $white;
+                padding: 15px 35px;
+                text-transform: uppercase;
+                font-weight: bold;
+                border-radius: 30px;
+                border: 2px solid #dd0707;
+                transition: 0.3s;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+           
+        }
+    }
+}
